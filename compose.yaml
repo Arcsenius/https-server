@@ -1,0 +1,9 @@
+services:
+  api:
+    image: fastapi-server
+    build: .
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
